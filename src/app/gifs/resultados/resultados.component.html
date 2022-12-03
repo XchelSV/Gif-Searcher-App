@@ -1,1 +1,14 @@
-<p>resultados works!</p>
+<div class="row">
+    <ngx-masonry>
+        <div ngxMasonryItem *ngFor="let gif of resultados" class="masonry-item mb-2 p-1">
+            <div class="card">
+                <img [src]="gif.images.downsized_medium.url" [alt]="gif.title" class="card-image-top">
+                <div class="card-body">
+                    <p class="card-text">
+                        {{gif.title}}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </ngx-masonry>
+</div>
